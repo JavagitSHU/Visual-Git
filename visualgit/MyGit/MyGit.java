@@ -277,6 +277,8 @@ public class MyGit implements RepoOperation, GitOperation {
                 String refName = ref.getName();
                 if (refName.startsWith("refs/heads/")) {
                      refName = refName.replace("refs/heads/", "");
+                     refName = refName.replace("[","");
+                     refName = refName.replace("]","");
                 }
                 resSet.add(refName);
             }
@@ -509,7 +511,7 @@ public class MyGit implements RepoOperation, GitOperation {
             m_remoteURI = remote;
             Set<String> set = new HashSet<>();
             branchList(set);
-            m_curBranch = set.toString();
+            m_curBranch = set.toArray()[0].toString();
         } catch (GitAPIException e) {
             ostream.log("remote_clone" + "\n" + "failed" + "\n" + e.toString());
             flag = false;
@@ -532,6 +534,7 @@ public class MyGit implements RepoOperation, GitOperation {
             // m_privateToken);
             m_git
                     .push()
+                    .setRemote(m_remoteName)
                     .setRefSpecs(new RefSpec(m_curBranch))
                     .setCredentialsProvider(credentialsProvider)
                     .call();
