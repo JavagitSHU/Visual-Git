@@ -1,14 +1,13 @@
-package com.jamesnulliu;
+package com.visualgit;
 
 
-import com.jamesnulliu.MyGit.GitOperation;
-import com.jamesnulliu.MyGit.MyGit;
-import com.jamesnulliu.MyGit.ProxyOperation;
-import com.jamesnulliu.MyGit.RepoOperation;
+import com.visualgit.MyGit.GitOperation;
+import com.visualgit.MyGit.MyGit;
+import com.visualgit.MyGit.ProxyOperation;
+import com.visualgit.MyGit.RepoOperation;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
 import java.io.File;
 import java.util.HashMap;
 import java.util.HashSet;

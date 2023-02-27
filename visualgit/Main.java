@@ -1,6 +1,6 @@
-package com.jamesnulliu;
+package com.visualgit;
 
-import com.jamesnulliu.MyGit.*;
+import com.visualgit.MyGit.*;
 
 
 

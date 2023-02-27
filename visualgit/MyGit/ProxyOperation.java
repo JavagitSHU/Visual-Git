@@ -1,4 +1,4 @@
-package com.jamesnulliu.MyGit;
+package com.visualgit.MyGit;
 
 public class ProxyOperation {
     public void set_porter(String porter) {

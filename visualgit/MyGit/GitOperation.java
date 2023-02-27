@@ -1,4 +1,4 @@
-package com.jamesnulliu.MyGit;
+package com.visualgit.MyGit;
 
 import java.util.List;
 import java.util.Map;

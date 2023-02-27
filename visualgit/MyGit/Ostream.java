@@ -1,4 +1,4 @@
-package com.jamesnulliu.MyGit;
+package com.visualgit.MyGit;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

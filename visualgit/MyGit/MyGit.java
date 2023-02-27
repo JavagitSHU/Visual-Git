@@ -3,7 +3,7 @@
  *  -JamesNULLiu
  *  -
  */
-package com.jamesnulliu.MyGit;
+package com.visualgit.MyGit;
 
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.MergeCommand;
