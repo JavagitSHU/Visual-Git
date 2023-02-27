@@ -1,10 +1,7 @@
 package com.visualgit;
 
 
-import com.visualgit.MyGit.GitOperation;
-import com.visualgit.MyGit.MyGit;
-import com.visualgit.MyGit.ProxyOperation;
-import com.visualgit.MyGit.RepoOperation;
+import com.visualgit.MyGit.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,6 +17,7 @@ public class jFrame extends javax.swing.JFrame {
     }
 
     MyGit mygit = new MyGit();
+    Ostream ostream = new Ostream();
     GitOperation git = mygit;
 
     RepoOperation repo = mygit;
@@ -97,7 +95,7 @@ public class jFrame extends javax.swing.JFrame {
         jTextField11.setForeground(Color.BLACK);
         //jTextField11.setVisible(false);
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("项目资源管理系统");
+        setTitle("Visual Git - version 0.2.0");
         setPreferredSize(new java.awt.Dimension(768, 720));
         setSize(new java.awt.Dimension(768, 720));
         //左边部分
@@ -717,7 +715,8 @@ public class jFrame extends javax.swing.JFrame {
         //方法
         System.out.printf("clone\n");
         String now= jTextField3.getText();
-        String log = repo.remote_clone(now);
+        ostream.output(jFileChooser1.getSelectedFile().getParent());
+        String log = repo.remote_clone(now, jFileChooser1.file);
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
         jTextArea3.setText(log);

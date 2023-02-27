@@ -1229,3 +1229,15 @@ Succeeded
 branchList
 failedSucceeded
 ====================
+check_localPath
+Succeeded
+====================
+openRepo
+Succeeded
+====================
+set_localPath
+Succeeded
+====================
+branchList
+failedSucceeded
+====================

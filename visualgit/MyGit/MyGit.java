@@ -42,11 +42,11 @@ public class MyGit implements RepoOperation, GitOperation {
     private String m_localPath;
     private String m_curBranch = "main";
     private String m_remoteName = "origin";
-    private String m_remoteURI;
-    private String m_privateToken;
-    private String m_userName;
-    private String m_password;
-    private String m_userEmail;
+    private String m_remoteURI = "";
+    private String m_privateToken = "";
+    private String m_userName = "";
+    private String m_password = "";
+    private String m_userEmail = "";
     // For ssh connection:
     final SshSessionFactory sshSessionFactory = new JschConfigSessionFactory() {
         @Override
@@ -113,6 +113,8 @@ public class MyGit implements RepoOperation, GitOperation {
     public String set_remoteURI(String remoteName, String uri) {
         flag = true;
         try {
+            // ===========================================================
+            // ***** Do Not Delete! *****
             // ===========================================================
             // Remove existing remotes.
             // Currently we only have one remote name "origin".
@@ -274,7 +276,7 @@ public class MyGit implements RepoOperation, GitOperation {
             for (Ref ref : call) {
                 String refName = ref.getName();
                 if (refName.startsWith("refs/heads/")) {
-                    refName.replace("refs/heads/", "");
+                    refName = refName.replace("refs/heads/", "");
                 }
                 resSet.add(ref.getName());
             }
@@ -473,8 +475,10 @@ public class MyGit implements RepoOperation, GitOperation {
     }
 
     @Override
-    public String remote_clone(String remote) {
+    public String remote_clone(String remote, String destination) {
         flag = true;
+        // ========================================================================
+        // ***** Do Not Delete *****
         // SSH connection =========================================================
         // CloneCommand cloneCommand = Git.cloneRepository();
         // cloneCommand.setTransportConfigCallback(new TransportConfigCallback(){
@@ -482,7 +486,6 @@ public class MyGit implements RepoOperation, GitOperation {
         // public String configure(Transport transport){
         // SshTransport sshTransport = (SshTransport) transport;
         // sshTransport . setSshSessionFactory(sshSessionFactory);
-
         // }
         // });
         // cloneCommand.setURI(remote);
@@ -497,11 +500,11 @@ public class MyGit implements RepoOperation, GitOperation {
             CredentialsProvider credentialsProvider = createProvider();
             m_git = Git
                     .cloneRepository()
-                    // .setBare(true)
+                    .setBare(false)
                     .setCredentialsProvider(credentialsProvider)
                     .setCloneAllBranches(true)
                     .setURI(remote)
-                    .setDirectory(new File(m_localPath))
+                    .setDirectory(new File(destination))
                     .call();
             m_remoteURI = remote;
             Set<String> set = new HashSet<>();
