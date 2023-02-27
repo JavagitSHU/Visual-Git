@@ -716,7 +716,7 @@ public class jFrame extends javax.swing.JFrame {
         System.out.printf("clone\n");
         String now= jTextField3.getText();
         ostream.output(jFileChooser1.getSelectedFile().getParent());
-        String log = repo.remote_clone(now, jFileChooser1.file);
+        String log = repo.remote_clone(now, jFileChooser1.getSelectedFile().getPath());
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
         jTextArea3.setText(log);

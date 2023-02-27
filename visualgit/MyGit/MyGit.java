@@ -276,9 +276,9 @@ public class MyGit implements RepoOperation, GitOperation {
             for (Ref ref : call) {
                 String refName = ref.getName();
                 if (refName.startsWith("refs/heads/")) {
-                    refName = refName.replace("refs/heads/", "");
+                     refName = refName.replace("refs/heads/", "");
                 }
-                resSet.add(ref.getName());
+                resSet.add(refName);
             }
         } catch (GitAPIException e) {
             ostream.log("branchList" + "\n" + "failed" + "\n" + e.toString());
