@@ -22,7 +22,7 @@ public interface RepoOperation {
 
 
     // Remote Repository Operations:
-    String remote_clone(String remote);
+    String remote_clone(String remote, String destination);
 
     String remote_push();
 
