@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="eclipse.jgit" type="repository">
+    <properties maven-id="org.eclipse.jgit:org.eclipse.jgit:5.4.0.201906121030-r" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jgit/org.eclipse.jgit/5.4.0.201906121030-r/org.eclipse.jgit-5.4.0.201906121030-r.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/jcraft/jzlib/1.1.1/jzlib-1.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/javaewah/JavaEWAH/1.1.6/JavaEWAH-1.1.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/bouncycastle/bcpg-jdk15on/1.61/bcpg-jdk15on-1.61.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/bouncycastle/bcprov-jdk15on/1.61/bcprov-jdk15on-1.61.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/bouncycastle/bcpkix-jdk15on/1.61/bcpkix-jdk15on-1.61.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
