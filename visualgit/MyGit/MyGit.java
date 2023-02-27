@@ -307,6 +307,11 @@ public class MyGit implements RepoOperation, GitOperation {
                     .setGitDir(Paths.get(m_localPath, ".git").toFile())
                     .build();
             git = new Git(repository);
+            Set<String> set = new HashSet<>();
+            branchList(set);
+            m_curBranch = set.toArray()[0].toString();
+            switchBranch(m_curBranch);
+            m_remoteURI = git.getRepository().getConfig().getString("remote","origin","url");
         } catch (IOException e) {
             ostream.log("openRepo" + "\n" + "failed" + "\n" + e.toString());
             flag = false;

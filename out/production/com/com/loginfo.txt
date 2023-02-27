@@ -1685,3 +1685,96 @@ failedSucceeded
 remote_clone
 Succeeded
 ====================
+check_localPath
+Succeeded
+====================
+openRepo
+Succeeded
+====================
+set_localPath
+Succeeded
+====================
+branchList
+failedSucceeded
+====================
+set_userName
+Succeeded
+====================
+set_password
+Succeeded
+====================
+remote_clone
+failed
+org.eclipse.jgit.api.errors.TransportException: https://github.com/JavagitSHU/Visual-Git.git: cannot open git-upload-pack
+====================
+remote_clone
+failed
+org.eclipse.jgit.api.errors.TransportException: https://github.com/Dilute9629/test.git: cannot open git-upload-pack
+====================
+set_userName
+Succeeded
+====================
+set_password
+Succeeded
+====================
+remote_clone
+failed
+org.eclipse.jgit.api.errors.TransportException: https://github.com/Dilute9629/test.git: cannot open git-upload-pack
+====================
+branchList
+failedSucceeded
+====================
+remote_clone
+Succeeded
+====================
+status
+Succeeded
+====================
+status
+Succeeded
+====================
+add
+Succeeded
+====================
+commit
+Succeeded
+====================
+remote_push
+failed
+org.eclipse.jgit.api.errors.TransportException: https://github.com/Dilute9629/test.git: cannot open git-receive-pack
+====================
+remote_push
+failed
+org.eclipse.jgit.api.errors.TransportException: https://github.com/Dilute9629/test.git: cannot open git-receive-pack
+====================
+status
+Succeeded
+====================
+remote_push
+failed
+org.eclipse.jgit.api.errors.TransportException: https://github.com/Dilute9629/test.git: cannot open git-receive-pack
+====================
+remote_push
+failed
+org.eclipse.jgit.api.errors.TransportException: https://github.com/Dilute9629/test.git: cannot open git-receive-pack
+====================
+remote_push
+failed
+org.eclipse.jgit.api.errors.TransportException: https://github.com/Dilute9629/test.git: not authorized
+====================
+remote_push
+failed
+org.eclipse.jgit.api.errors.TransportException: https://github.com/Dilute9629/test.git: cannot open git-receive-pack
+====================
+check_localPath
+Succeeded
+====================
+openRepo
+Succeeded
+====================
+set_localPath
+Succeeded
+====================
+branchList
+failedSucceeded
+====================
