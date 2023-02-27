@@ -1280,6 +1280,7 @@ Succeeded
 branchList
 failedSucceeded
 ====================
+<<<<<<< HEAD
 check_localPath
 Succeeded
 ====================
@@ -1331,11 +1332,34 @@ failed
 org.eclipse.jgit.api.errors.InvalidRefNameException: Branch name <null> is not allowed
 ====================
 createBranch
+=======
+remote_clone
+failed
+org.eclipse.jgit.api.errors.InvalidRemoteException: Invalid remote: origin
+====================
+set_userName
+Succeeded
+====================
+set_password
+Succeeded
+====================
+set_privateToken
+Succeeded
+====================
+set_authorInfo
+Succeeded
+====================
+set_authorInfo
+>>>>>>> 958925fcbe3d93518eb70a48f72047fb46ff60db
 Succeeded
 ====================
 branchList
 failedSucceeded
 ====================
+<<<<<<< HEAD
 switchBranch
+=======
+remote_clone
+>>>>>>> 958925fcbe3d93518eb70a48f72047fb46ff60db
 Succeeded
 ====================
