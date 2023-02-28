@@ -32,6 +32,15 @@ public class MyGit implements RepoOperation, GitOperation {
     // Members ===================================================
     public Ostream ostream = new Ostream();
     Boolean flag = true;
+
+    public MyGit() {
+        try{
+        m_git = new Git(new FileRepositoryBuilder().setGitDir(
+                Paths.get("C:/Users/james/Desktop/", ".git").toFile()).build());
+        } catch (IOException e) {
+        }
+    }
+
     private Git m_git;
     private String m_localPath;
     private String m_curBranch = "main";
@@ -303,7 +312,11 @@ public class MyGit implements RepoOperation, GitOperation {
             git = new Git(repository);
             Set<String> set = new HashSet<>();
             branchList(set);
-            m_curBranch = set.toArray()[0].toString();
+            if (!set.isEmpty()) {
+                m_curBranch = set.toArray()[0].toString();
+            } else {
+                m_curBranch = "main";
+            }
             switchBranch(m_curBranch);
             m_remoteURI = git.getRepository().getConfig().getString("remote", "origin", "url");
         } catch (IOException e) {
