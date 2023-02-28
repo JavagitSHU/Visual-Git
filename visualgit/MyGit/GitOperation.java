@@ -18,25 +18,20 @@ public interface GitOperation {
      */
     String set_remoteURI(String remoteName, String uri);
 
-    /**
-     * Go to a folder and if there has already been a git repo, the repo would be
-     * activated.
-     * [Note] If there is not any git repo, use {createRepository} to initialize a
-     * git repo.
-     * {@code $git bash %localPath%} 
-     */
+    // git bash %localPath%
     String set_localPath(String localPath);
 
-    /**
-     * 
-     */
+    // NO COMMAND
     String set_privateToken(String privateToken);
 
+    // NO COMMAND
     String set_userName(String userName);
 
+    // NO COMMAND
     String set_password(String password);
 
-
+    // git --config user.name %name%
+    // git --config user.email %email%
     String set_authorInfo(String name, String email);
     
     /**

@@ -63,6 +63,28 @@ public class MyGit implements RepoOperation, GitOperation {
     };
     // ===========================================================
 
+    // Constructor ===============================================
+    public MyGit(){
+        try {
+            Repository repository = new FileRepositoryBuilder()
+                    .findGitDir(new File("C:/Users/"))
+                    .setGitDir(Paths.get(m_localPath, ".git").toFile())
+                    .build();
+            m_git = new Git(repository);
+            Set<String> set = new HashSet<>();
+            branchList(set);
+            if(set.toArray().length!=0) {
+                m_curBranch = set.toArray()[0].toString();
+                switchBranch(m_curBranch);
+            }else{
+                m_curBranch = "main";
+            }
+        } catch (IOException e) {
+        }
+    }
+    // ===========================================================
+
+
     private Boolean check_localPath() {
         if (m_localPath.equals("")) {
             ostream.log("Cannot open repository in empty path, consider set local path first.");
@@ -287,7 +309,7 @@ public class MyGit implements RepoOperation, GitOperation {
             flag = false;
         } finally {
             if (flag)
-                ostream.log("branchList" + "\n" + "failed" + "Succeeded");
+                ostream.log("branchList" + "\n" + "Succeeded");
         }
         return ostream.loginfo;
 
@@ -295,7 +317,6 @@ public class MyGit implements RepoOperation, GitOperation {
     // ===========================================================
 
     // Implementation of {GitOperation} ==========================
-
     private String openRepo() {
         flag = true;
         Git git = null;
@@ -303,13 +324,17 @@ public class MyGit implements RepoOperation, GitOperation {
             return "";
         try {
             Repository repository = new FileRepositoryBuilder()
-                    // .findGitDir(new File(m_localPath))
+                    .findGitDir(new File(m_localPath))
                     .setGitDir(Paths.get(m_localPath, ".git").toFile())
                     .build();
             git = new Git(repository);
             Set<String> set = new HashSet<>();
             branchList(set);
-            m_curBranch = set.toArray()[0].toString();
+            if(set.toArray().length!=0) {
+                m_curBranch = set.toArray()[0].toString();
+            }else{
+                m_curBranch = "main";
+            }
             switchBranch(m_curBranch);
             m_remoteURI = git.getRepository().getConfig().getString("remote","origin","url");
         } catch (IOException e) {
@@ -444,7 +469,14 @@ public class MyGit implements RepoOperation, GitOperation {
     public String switchBranch(String branchName) {
         flag = true;
         try {
-            m_git.checkout().setName(branchName).call();
+            Set<String> set = new HashSet<>();
+            branchList(set);
+            if(set.contains(branchName)) {
+                m_git.checkout().setName(branchName).call();
+            }else{
+                throw new GitAPIException("Not existing branch"){
+                };
+            }
             m_curBranch = branchName;
         } catch (GitAPIException e) {
             ostream.log("switchBranch" + "\n" + "failed" + "\n" + e.toString());

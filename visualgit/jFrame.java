@@ -26,14 +26,7 @@ public class jFrame extends javax.swing.JFrame {
 
     String pathhh;
     private void initComponents() {
-        git.set_localPath("C:\\Users\\28040\\Desktop");
-        /*
-         *
-         *创建分支，jButton1ActionPerformed()方法在263行，不要在这里写！！！！！！
-         * 万一出bug这个函数再找起来太麻烦，别的监听尽量也在这个函数外写
-         *
-         */
-
+        git.set_localPath("C:\\Users\\James\\Desktop\\test");
         //声明
         jMenuBar = new JMenuBar();
         jMenu1 = new JMenu("设置");
