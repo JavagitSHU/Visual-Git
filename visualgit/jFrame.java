@@ -646,6 +646,22 @@ public class jFrame extends javax.swing.JFrame {
 
 
 
+public void EnfullBranchList()
+{
+    Set<String> res =  new HashSet<>();
+    mygit.branchList(res);
+    String[] now=new String[res.size()];
+    System.out.println(res.size());
+    int i =0;
+    for(String b:res)
+    {
+        now[i]=b;
+        System.out.println(b);
+        i++;
+    }
+    jList1.setListData(now);
+    jList1.setVisible(true);
+}
 
 
 
@@ -724,6 +740,8 @@ public class jFrame extends javax.swing.JFrame {
         String now= jTextField3.getText();
         // Only for test --- JamesNULLiu
         ostream.output(jFileChooser1.getSelectedFile().toString());
+        pathhh=jFileChooser1.getSelectedFile().toString();
+        git.set_localPath(pathhh);
         // -----------------------------
         jTextArea4.setText("git clone "+now);
         String log = repo.remote_clone(now, jFileChooser1.getSelectedFile().toString());
@@ -731,6 +749,7 @@ public class jFrame extends javax.swing.JFrame {
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
         jTextArea3.setText(log);
+        EnfullBranchList();
     }
     //init
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {             //已完成
@@ -742,6 +761,7 @@ public class jFrame extends javax.swing.JFrame {
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
         jTextArea3.setText(log);
+        EnfullBranchList();
     }
     //add
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {           //已完成

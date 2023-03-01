@@ -112,6 +112,7 @@ public class MyGit implements RepoOperation, GitOperation {
     @Override
     public String set_remoteURI(String uri) {
         flag = true;
+        System.out.print(m_git.getRepository());
         try {
             m_git   .remoteAdd()
                     .setName(m_remoteName)
@@ -570,6 +571,7 @@ public class MyGit implements RepoOperation, GitOperation {
             // CredentialsProvider credentialsProvider = new
             // UsernamePasswordCredentialsProvider("PRIVATE-TOKEN",
             // m_privateToken);
+            System.out.println(m_curBranch);
             m_git
                     .push()
                     .setRemote(m_remoteName)
