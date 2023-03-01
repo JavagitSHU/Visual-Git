@@ -305,7 +305,7 @@ public class jFrame extends javax.swing.JFrame {
 
         jButton12.setText("pull");
 
-        jButton11.setText("pudh");
+        jButton11.setText("push");
 
         jButton10.setText("romote");
 
@@ -721,6 +721,7 @@ public class jFrame extends javax.swing.JFrame {
     //init
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {             //已完成
         //方法
+        pathhh=jFileChooser1.getSelectedFile().toString();
         git.set_localPath(pathhh);
         String log = repo.createGitRepository();
         String oldlog = jTextArea3.getText();
