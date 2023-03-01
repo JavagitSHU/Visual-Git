@@ -39,7 +39,7 @@ public class MyGit implements RepoOperation, GitOperation {
     public Ostream ostream = new Ostream();
     Boolean flag = true;
     private Git m_git;
-    private String m_localPath;
+    private String m_localPath="C://";
     private String m_curBranch = "main";
     private String m_remoteName = "origin";
     private String m_remoteURI = "";

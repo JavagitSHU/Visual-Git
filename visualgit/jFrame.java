@@ -3,6 +3,7 @@ package com.visualgit;
 
 import com.visualgit.MyGit.*;
 
+import javax.lang.model.type.NullType;
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
@@ -16,7 +17,7 @@ public class jFrame extends javax.swing.JFrame {
         initComponents();
     }
 
-    MyGit mygit = new MyGit();
+    MyGit mygit=new MyGit();
     Ostream ostream = new Ostream();
     GitOperation git = mygit;
 
