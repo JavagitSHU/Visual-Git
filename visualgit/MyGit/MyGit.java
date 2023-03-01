@@ -38,8 +38,8 @@ public class MyGit implements RepoOperation, GitOperation {
     // Members ===================================================
     public Ostream ostream = new Ostream();
     Boolean flag = true;
-    private Git m_git;
-    private String m_localPath="C://";
+    public Git m_git;
+    public String m_localPath="C://";
     private String m_curBranch = "main";
     private String m_remoteName = "origin";
     private String m_remoteURI = "";
@@ -98,8 +98,10 @@ public class MyGit implements RepoOperation, GitOperation {
 
     private CredentialsProvider createProvider() {
         if (!m_privateToken.isEmpty()) {
+            System.out.print(m_privateToken);
             return new UsernamePasswordCredentialsProvider("PRIVATE-TOKEN", m_privateToken);
         } else if (!m_password.isEmpty() && !m_userName.isEmpty()) {
+            System.out.print(m_userName+'\n'+m_password);
             return new UsernamePasswordCredentialsProvider(m_userName, m_password);
         }
         return null;
