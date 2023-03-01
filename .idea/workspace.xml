@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="56e17339-57b7-46ff-9429-9fabec41edce" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/loginfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/com/com/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/com/com/loginfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/loginfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/com/com/visualgit/MyGit/MyGit$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/visualgit/MyGit/MyGit$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/com/com/visualgit/MyGit/MyGit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/visualgit/MyGit/MyGit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/com/com/visualgit/jFrame$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/visualgit/jFrame$36.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/com/com/visualgit/jFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/visualgit/jFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/com/com/visualgit/mian.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/visualgit/mian.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualgit/MyGit/MyGit.java" beforeDir="false" afterPath="$PROJECT_DIR$/visualgit/MyGit/MyGit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualgit/jFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/visualgit/jFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualgit/mian.java" beforeDir="false" afterPath="$PROJECT_DIR$/visualgit/mian.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MMw6T4gmdrl9KxHf7pSStqN86l" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56e17339-57b7-46ff-9429-9fabec41edce" name="Changes" comment="" />
+      <created>1677590586898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677590586898</updated>
+      <workItem from="1677590589728" duration="3171000" />
+      <workItem from="1677662639807" duration="51000" />
+      <workItem from="1677662717066" duration="82000" />
+      <workItem from="1677663344699" duration="660000" />
+      <workItem from="1677664317364" duration="1392000" />
+      <workItem from="1677668005599" duration="1058000" />
+      <workItem from="1677669211442" duration="501000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="flag" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
