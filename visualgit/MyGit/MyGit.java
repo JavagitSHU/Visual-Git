@@ -40,7 +40,7 @@ public class MyGit implements RepoOperation, GitOperation {
     Boolean flag = true;
     public Git m_git;
     public String m_localPath="C://";
-    private String m_curBranch = "main";
+    private String m_curBranch = "master";
     private String m_remoteName = "origin";
     private String m_remoteURI = "";
     private String m_privateToken = "";
@@ -113,11 +113,9 @@ public class MyGit implements RepoOperation, GitOperation {
     public String set_remoteURI(String uri) {
         flag = true;
         try {
-            m_git
-                    .remoteAdd()
-                    .setName(m_remoteName)   //设置remote名字
-                    .setUri(new URIish(uri))  //设置url
-                    .call();
+            m_git   .remoteAdd()
+                    .setName(m_remoteName)
+                    .setUri(new URIish(uri)).call();
             m_remoteURI = uri;
         } catch (GitAPIException e) {
             ostream.log("set_remoteURI" + "\n" + "failed" + "\n" + e.toString());
@@ -595,6 +593,7 @@ public class MyGit implements RepoOperation, GitOperation {
         try {
             CredentialsProvider credentialsProvider = createProvider();
             m_git.pull()
+                   // .setRemoteBranchName(m_curBranch)
                     .setCredentialsProvider(credentialsProvider)
                     .call();
         } catch (GitAPIException e) {
