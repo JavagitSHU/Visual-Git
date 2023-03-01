@@ -114,9 +114,10 @@ public class MyGit implements RepoOperation, GitOperation {
         flag = true;
         try {
             m_git
-                    .remoteSetUrl()
-                    .setRemoteName(m_remoteName)
-                    .setRemoteUri(new URIish(uri)).call();
+                    .remoteAdd()
+                    .setName(m_remoteName)   //设置remote名字
+                    .setUri(new URIish(uri))  //设置url
+                    .call();
             m_remoteURI = uri;
         } catch (GitAPIException e) {
             ostream.log("set_remoteURI" + "\n" + "failed" + "\n" + e.toString());
