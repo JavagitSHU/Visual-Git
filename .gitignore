@@ -3,4 +3,4 @@
 /workspace.xml
 **/*.class
 **/out/**
-loginfo.txt
+loginfo.txt/
