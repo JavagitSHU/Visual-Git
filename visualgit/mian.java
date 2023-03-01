@@ -28,7 +28,7 @@ public class mian {
         System.out.println(git);
 //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
         CredentialsProvider provider = new UsernamePasswordCredentialsProvider("PRIVATE-TOKEN", "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");  //生成身份信息
-
+//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
         String branch = "master";   //克隆目标分支
   /*      git.push()
                 .setRemote("origin")    //设置推送的URL名称

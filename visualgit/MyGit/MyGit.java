@@ -40,7 +40,7 @@ public class MyGit implements RepoOperation, GitOperation {
     Boolean flag = true;
     public Git m_git;
     public String m_localPath="C://";
-    private String m_curBranch = "master";
+    public String m_curBranch = "main";
     private String m_remoteName = "origin";
     private String m_remoteURI = "";
     private String m_privateToken = "";

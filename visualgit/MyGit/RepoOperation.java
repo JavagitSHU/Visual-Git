@@ -13,7 +13,7 @@ public interface RepoOperation {
     // git commit -m %comment%
     String commit(String comment);
 
-    // git branch -b %branchName%j
+    // git branch -b %branchName%
     String createBranch(String branchName);
 
     // git branch -d %branchName%

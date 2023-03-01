@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="56e17339-57b7-46ff-9429-9fabec41edce" name="Changes" comment="">
+    <list default="true" id="56e17339-57b7-46ff-9429-9fabec41edce" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualgit/MyGit/Ostream.java" beforeDir="false" afterPath="$PROJECT_DIR$/visualgit/MyGit/Ostream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualgit/MyGit/MyGit.java" beforeDir="false" afterPath="$PROJECT_DIR$/visualgit/MyGit/MyGit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualgit/MyGit/RepoOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/visualgit/MyGit/RepoOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualgit/jFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/visualgit/jFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualgit/mian.java" beforeDir="false" afterPath="$PROJECT_DIR$/visualgit/mian.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,14 +28,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,6 +67,23 @@
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="cb7496e4-713c-41f6-a8fc-da289fe71d80">
           <value>
             <State />
           </value>

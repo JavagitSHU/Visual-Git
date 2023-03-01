@@ -39,10 +39,11 @@ public class jFrame extends javax.swing.JFrame {
         jMenuItem3 = new JMenuItem("添加分支");
         jMenuItem4 = new JMenuItem("删除分支");
         jMenuItem5 = new JMenuItem("切换分支");
-
+        jMenuItem8 = new JMenuItem("合并分支");
         jButton15 = new JButton("确认");
         jButton16 = new JButton("确认");
         jButton17 = new JButton("确认");
+        jButton18 = new JButton("合并分支");
         jTextField8 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
@@ -331,6 +332,7 @@ public class jFrame extends javax.swing.JFrame {
         jMenu2.add(jMenuItem3);
         jMenu2.add(jMenuItem4);
         jMenu2.add(jMenuItem5);
+        jMenu2.add(jMenuItem8);
         jMenuBar.add(jMenu1);
         jMenuBar.add(jMenu2);
         this.setJMenuBar(jMenuBar);
@@ -495,7 +497,11 @@ public class jFrame extends javax.swing.JFrame {
                 jButton17ActionPerformed(evt);
             }
         });
-
+        jButton18.addActionListener(new java.awt.event.ActionListener(){
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
 
         jMenuItem1.addActionListener(new java.awt.event.ActionListener(){
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -532,7 +538,11 @@ public class jFrame extends javax.swing.JFrame {
                 jMenuItem7ActionPerformed(evt);
             }
         });
-
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener(){
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
 
         jTextField1.addMouseListener(new java.awt.event.MouseAdapter(){
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -649,6 +659,7 @@ public class jFrame extends javax.swing.JFrame {
         //方法
         System.out.printf("创建分支\n");
         String name=jTextField1.getText();
+        jTextArea4.setText("git branch -b "+name);
         String log = repo.createBranch(name);
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
@@ -673,6 +684,7 @@ public class jFrame extends javax.swing.JFrame {
         //方法
         System.out.printf("删除分支\n");
         String name=jList1.getSelectedValue();
+        jTextArea4.setText("git branch -d "+name);
         String log = repo.deleteBranch(name);
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
@@ -698,6 +710,7 @@ public class jFrame extends javax.swing.JFrame {
         System.out.printf("切换分支\n");
         System.out.printf(jList1.getSelectedValue()+'\n');//选择项
         String name = jList1.getSelectedValue();
+        jTextArea4.setText("git checkout "+name);
         String log = repo.switchBranch(name);
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
@@ -711,7 +724,8 @@ public class jFrame extends javax.swing.JFrame {
         String now= jTextField3.getText();
         // Only for test --- JamesNULLiu
         ostream.output(jFileChooser1.getSelectedFile().toString());
-        // ----------------------------
+        // -----------------------------
+        jTextArea4.setText("git clone "+now);
         String log = repo.remote_clone(now, jFileChooser1.getSelectedFile().toString());
         System.out.println(jFileChooser1.getSelectedFile().toString());
         String oldlog = jTextArea3.getText();
@@ -723,6 +737,7 @@ public class jFrame extends javax.swing.JFrame {
         //方法
         pathhh=jFileChooser1.getSelectedFile().toString();
         git.set_localPath(pathhh);
+        jTextArea4.setText("git init");
         String log = repo.createGitRepository();
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
@@ -735,15 +750,18 @@ public class jFrame extends javax.swing.JFrame {
         String all="";
         File[] now = jFileChooser1.getSelectedFiles();
         String[] now1= toStrin1(now);
+        String command="";
         for (int j = 0; j < now1.length; j++) {
             String[] split=now1[j].split("\\\\");
             now1[j]=split[split.length-1];
             System.out.println(now1[j]);
         }
         for (int i = 0; i < now1.length; i++) {
+            command+="git add "+now1[i]+"\n";
             String log = repo.add(now1[i]);
             all = log+all;
         }
+        jTextArea4.setText(command);
         String oldlog = jTextArea3.getText();
         all=oldlog+"\n"+all;
         jTextArea3.setText(all);
@@ -755,6 +773,7 @@ public class jFrame extends javax.swing.JFrame {
         String context = jTextArea2.getText();
         System.out.printf("commit\n");
         System.out.println(jTextArea2.getText());
+        jTextArea4.setText("git commit -m "+"\""+context+"\"");
         String log = repo.commit(context);
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
@@ -767,6 +786,7 @@ public class jFrame extends javax.swing.JFrame {
         System.out.printf("status\n");
         String now = "";
         Map<String, Set<String>> map1 = new HashMap<String, Set<String>>();
+        jTextArea4.setText("git status");
         String log = mygit.status(map1);
         now +="[Added]: \n";
         if(map1.get("Added")!=null) {
@@ -843,6 +863,7 @@ public class jFrame extends javax.swing.JFrame {
         System.out.printf("remote\n");
         String url=jTextField3.getText();
         System.out.printf(url);
+        jTextArea4.setText("git origin add "+url);
         String log = git.set_remoteURI(url);
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
@@ -855,6 +876,7 @@ public class jFrame extends javax.swing.JFrame {
         System.out.printf("push\n");
         JGitUtils jGitUtils = null;
         mygit.m_git=jGitUtils.openRpo(mygit.m_localPath);
+        jTextArea4.setText("git push");
         String log = mygit.remote_push();
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
@@ -868,6 +890,7 @@ public class jFrame extends javax.swing.JFrame {
         System.out.printf("pull\n");
         JGitUtils jGitUtils = null;
         mygit.m_git=jGitUtils.openRpo(mygit.m_localPath);
+        jTextArea4.setText("git pull");
         String log =mygit.remote_pull();
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
@@ -916,6 +939,8 @@ public class jFrame extends javax.swing.JFrame {
         String email=jTextField9.getText();
         System.out.println(user);
         System.out.println(email);
+        jTextArea4.setText("git --config user.name "+user+"\n"+"git --config user.email "+email+"\n");
+
         String log = git.set_authorInfo(user,email);
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
@@ -936,6 +961,19 @@ public class jFrame extends javax.swing.JFrame {
         String oldlog = jTextArea3.getText();
         log1=oldlog+"\n"+log1;
         jTextArea3.setText(log1);
+
+    }
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {
+        //方法
+        System.out.printf("合并分支\n");
+        System.out.printf(jList1.getSelectedValue()+'\n');//选择项
+        String name = jList1.getSelectedValue();
+        jTextArea4.setText("git checkout "+mygit.m_curBranch+"\n"+"git merge "+name+"\n");
+        String log = repo.mergeBranch(name,mygit.m_curBranch);
+        String oldlog = jTextArea3.getText();
+        log=oldlog+"\n"+log;
+        jTextArea3.setText(log);
+        //jTextField2.setText("当前分支为："+name);
 
     }
     private void jFileChooser1ActionPerformed(java.awt.event.ActionEvent evt) {                    //已完成
@@ -1252,6 +1290,47 @@ public class jFrame extends javax.swing.JFrame {
 
     }
 
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {
+        //方法
+        JFrame jfram2= new JFrame();
+        jfram2.setTitle("合并分支");
+        jfram2.setVisible(true);
+        jfram2.setPreferredSize(new java.awt.Dimension(360, 500));
+        jfram2.setSize(new java.awt.Dimension(360, 500));
+        javax.swing.GroupLayout jfram2layout = new javax.swing.GroupLayout(jfram2.getContentPane());
+        jfram2.getContentPane().setLayout(jfram2layout);
+        jfram2layout.setHorizontalGroup(
+                jfram2layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jfram2layout.createSequentialGroup()
+                                .addGroup(jfram2layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jfram2layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jButton18)
+                                                .addContainerGap())
+                                        .addGroup(jfram2layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addContainerGap()))));
+        jfram2layout.setVerticalGroup(
+                jfram2layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jfram2layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jfram2layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                )
+                                .addContainerGap()
+                                .addGroup(jfram2layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 712, Short.MAX_VALUE))
+                                .addContainerGap())
+        );
+
+    }
+
+
+
+
+
 
     public static void main(String args[]) {
         //窗口样式
@@ -1288,6 +1367,7 @@ public class jFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton15;//确认token
     private javax.swing.JButton jButton16;//确认署名
     private javax.swing.JButton jButton17;//确认身份验证账号密码
+    private javax.swing.JButton jButton18;//合并分支
     private javax.swing.JButton jButton1;//创建分支
     private javax.swing.JButton jButton2;//删除分支
     private javax.swing.JButton jButton3;//切换分支
@@ -1333,6 +1413,8 @@ public class jFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;//删除分支
     private javax.swing.JMenuItem jMenuItem6;//设置署名
     private javax.swing.JMenuItem jMenuItem7;//设置账号密码
+    private javax.swing.JMenuItem jMenuItem8;//合并分支
+
     private int gapsize=10;
 
     // End of variables declaration
