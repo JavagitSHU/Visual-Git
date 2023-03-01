@@ -907,6 +907,7 @@ public class jFrame extends javax.swing.JFrame {
         String oldlog = jTextArea3.getText();
         porter=oldlog+"\n"+porter;
         jTextArea3.setText(porter + "设置成功");
+        jTextArea4.setText(" ");
 
     }
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -917,7 +918,7 @@ public class jFrame extends javax.swing.JFrame {
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
         jTextArea3.setText(log);
-
+        jTextArea4.setText(" ");
         System.out.printf("断开连接\n");
     }
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -930,6 +931,7 @@ public class jFrame extends javax.swing.JFrame {
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
         jTextArea3.setText(log);
+        jTextArea4.setText(" ");
 
     }
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -961,6 +963,7 @@ public class jFrame extends javax.swing.JFrame {
         String oldlog = jTextArea3.getText();
         log1=oldlog+"\n"+log1;
         jTextArea3.setText(log1);
+        jTextArea4.setText(" ");
 
     }
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -994,6 +997,7 @@ public class jFrame extends javax.swing.JFrame {
             System.out.println(evt.getActionCommand() + '\n' + jFileChooser1.getSelectedFile());
             jFileChooser1.setCurrentDirectory(new java.io.File("C:\\Users\\28040\\Desktop"));
         }
+        jTextArea4.setText("git status");
     }
 
     public String[] toStrin(File file)
