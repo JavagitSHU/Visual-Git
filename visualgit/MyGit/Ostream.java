@@ -4,6 +4,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class Ostream{
+    public Ostream(){
+        try {
+            FileOutputStream out = new FileOutputStream("loginfo.txt",false);
+            out.close();
+        }
+        catch (IOException e){
+            System.out.println(e);
+        }
+    }
     String loginfo = "";
     public void output(Object x){
         System.out.println(x);
@@ -24,5 +33,6 @@ public class Ostream{
             System.out.println(e);
         }
     }
+
 }
 
