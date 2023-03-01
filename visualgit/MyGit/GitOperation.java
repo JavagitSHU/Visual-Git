@@ -6,16 +6,10 @@ import java.util.Set;
 
 public interface GitOperation {
 
-    /**
-     * Set remote connection to {uri}.
-     * {@code git %origin% add %uri%}
-    */
+    // git origin add %uri%
     String set_remoteURI(String uri);
 
-    /**
-     * Set remote connection to {uri}.
-     * {@code git %remoteName% add %uri%}
-     */
+    // git %remoteName% add %uri%
     String set_remoteURI(String remoteName, String uri);
 
     // git bash %localPath%
@@ -34,22 +28,27 @@ public interface GitOperation {
     // git --config user.email %email%
     String set_authorInfo(String name, String email);
     
-    /**
-     * Set current active branch to {Branch}.
-     */
+    // NO COMMAND
     String set_curBranch(String curBranch);
 
+    // git rev-parse --abbrev-ref HEAD
     String get_curBranch();
 
+    // git status
     String status(Map<String, Set<String>> res);
 
+    // NO COMMAND
     String get_privateToken();
 
+    // NO COMMAND
     String get_localPath();
 
+    // NO COMMAND
     String get_remoteURI();
 
+    // git branch
     String branchList(Set<String> res);
 
+    // git log
     String historyList(List<String> res);
 }
