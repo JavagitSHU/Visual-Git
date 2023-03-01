@@ -134,7 +134,7 @@ public class jFrame extends javax.swing.JFrame {
         //jTextField5.setText("git command");
         //status信息
         jTextArea4.setEditable(false);
-        jTextArea4.setBackground(new java.awt.Color(255, 255, 255));
+        jTextArea4.setBackground(new java.awt.Color(160, 160, 160));
         jTextArea4.setColumns(20);
         jTextArea4.setRows(5);
         jTextArea4.setText("command");

@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="56e17339-57b7-46ff-9429-9fabec41edce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/loginfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/com/com/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/com/com/loginfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/loginfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/com/com/visualgit/MyGit/MyGit$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/visualgit/MyGit/MyGit$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/com/com/visualgit/MyGit/MyGit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/visualgit/MyGit/MyGit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/com/com/visualgit/jFrame$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/visualgit/jFrame$36.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/com/com/visualgit/jFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/visualgit/jFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/com/com/visualgit/mian.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/com/com/visualgit/mian.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visualgit/MyGit/MyGit.java" beforeDir="false" afterPath="$PROJECT_DIR$/visualgit/MyGit/MyGit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visualgit/jFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/visualgit/jFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visualgit/mian.java" beforeDir="false" afterPath="$PROJECT_DIR$/visualgit/mian.java" afterDir="false" />
