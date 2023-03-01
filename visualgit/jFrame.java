@@ -853,10 +853,13 @@ public class jFrame extends javax.swing.JFrame {
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {
         //方法
         System.out.printf("push\n");
+        JGitUtils jGitUtils = null;
+        mygit.m_git=jGitUtils.openRpo(mygit.m_localPath);
         String log = mygit.remote_push();
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
         jTextArea3.setText(log);
+        System.out.print("6666");
 
     }
     //pull
@@ -896,7 +899,7 @@ public class jFrame extends javax.swing.JFrame {
         //方法
         // git.set_remoteURL("","");
         System.out.printf("设置token\n");
-        String token=jTextField7.getText();
+        String token=jTextField4.getText();
         System.out.println(token);
         String log = git.set_privateToken(token);
         String oldlog = jTextArea3.getText();
