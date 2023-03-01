@@ -866,6 +866,8 @@ public class jFrame extends javax.swing.JFrame {
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {
         //方法
         System.out.printf("pull\n");
+        JGitUtils jGitUtils = null;
+        mygit.m_git=jGitUtils.openRpo(mygit.m_localPath);
         String log =mygit.remote_pull();
         String oldlog = jTextArea3.getText();
         log=oldlog+"\n"+log;
