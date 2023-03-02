@@ -90,7 +90,7 @@ public class jFrame extends javax.swing.JFrame {
         jTextField11.setForeground(Color.BLACK);
         //jTextField11.setVisible(false);
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Visual Git - version 0.2.0");
+        setTitle("Visual Git - version 1.0.0");
         setPreferredSize(new java.awt.Dimension(768, 720));
         setSize(new java.awt.Dimension(768, 720));
         //左边部分
@@ -135,7 +135,10 @@ public class jFrame extends javax.swing.JFrame {
         //jTextField5.setText("git command");
         //status信息
         jTextArea4.setEditable(false);
-        jTextArea4.setBackground(new java.awt.Color(160, 160, 160));
+        jTextArea4.setBackground(Color.BLACK);
+        jTextArea4.setForeground(Color.green);
+        jTextArea4.setFont(new Font("Courier New",Font.BOLD,16));
+        // jTextArea4.setBackground(new java.awt.Color(160, 160, 160));
         jTextArea4.setColumns(20);
         jTextArea4.setRows(5);
         jTextArea4.setText("command");
@@ -296,6 +299,9 @@ public class jFrame extends javax.swing.JFrame {
         jTextArea2.setText("commitmessage");
         jScrollPane3.setViewportView(jTextArea2);
 
+//        jTextArea3.setBackground(new Color(224, 224, 224, 255));
+//        jTextArea3.setForeground(Color.BLACK);
+//        jTextArea3.setFont(new Font("Cascadia Mono",Font.PLAIN,14));
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
         jTextArea3.setText("Logs:\n");
@@ -304,21 +310,30 @@ public class jFrame extends javax.swing.JFrame {
         jScrollPane4.setViewportView(jTextArea3);
 
 
+        Font font = new Font("Cascadia Mono", Font.PLAIN, 15);
         jButton12.setText("pull");
+        jButton12.setFont(font);
 
         jButton11.setText("push");
+        jButton11.setFont(font);
 
-        jButton10.setText("romote");
+        jButton10.setText("remote");
+        jButton10.setFont(font);
 
         jButton9.setText("status");
+        jButton9.setFont(font);
 
         jButton8.setText("commit");
+        jButton8.setFont(font);
 
         jButton6.setText("init");
+        jButton6.setFont(font);
 
         jButton7.setText("add");
+        jButton7.setFont(font);
 
         jButton5.setText("clone");
+        jButton5.setFont(font);
 
         jTextField3.setText("远程仓库");
 
